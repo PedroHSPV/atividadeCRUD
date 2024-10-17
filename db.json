@@ -1,0 +1,10 @@
+{
+  "funcionarios": [
+    {
+      "id": "56ed",
+      "nome": "pedro Vilela",
+      "funcao": "Treinee",
+      "salario": "1500"
+    }
+  ]
+}
