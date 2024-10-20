@@ -6,8 +6,8 @@ const sSalario = document.querySelector('#m-salario');
 const btnSalvar = document.querySelector('#btnSalvar');
 
 // declara as variaveis 
-let itens; // armazena a lista de funcionarios
-let id; // armazena o indice quando editar um item
+let itens = [] // armazena a lista de funcionarios
+let id = null // armazena o indice quando editar um item
 
 
 // Função para buscar itens do servidor (GET)
@@ -122,7 +122,7 @@ btnSalvar.onclick = async (e) => {
     salario: sSalario.value,
   };
 
-  if (id !== undefined) {
+  if (id !== null) {
     await editItemBD(id, funcionario);
   } else {
     await addItemBD(funcionario);
@@ -130,5 +130,5 @@ btnSalvar.onclick = async (e) => {
 
   modal.classList.remove('active');
   loadItens();
-  id = undefined;
+  id = null;
 };
